@@ -1,0 +1,6 @@
+Import('env')
+
+src = []
+src_subdirs = env['src_subdirs']
+for s in src_subdirs:
+    src += env.Glob(s + '/*.c')
